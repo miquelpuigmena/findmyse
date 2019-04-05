@@ -2,13 +2,13 @@ import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import Story from './src/components/story/Story';
 import Chat from './src/components/chat/Chat';
-import MainHeader from './src/components/mainHeader/MainHeader';
+import Ranking from './src/components/ranking/Ranking';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={{flex: 1}}>
-        <Story/>
+        <Ranking/>
       </View>
       
     );
