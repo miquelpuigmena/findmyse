@@ -7,7 +7,7 @@ export default class MainHeader extends React.Component {
         return (
           <View style={styles.container}>
             <View style={styles.headerContainer}>
-                <Image style={styles.porfileIcon} source={require('./porfile.png')}/>
+                <Image style={styles.profileIcon} source={require('./profile.png')}/>
                 <Text style={styles.screenTitle}>{this.props.title}</Text>
                 <Image style={styles.messageIcon} source={require('./messages.png')} />
             </View>
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
   },
-  porfileIcon: {
+  profileIcon: {
     width: 40, 
     height: 40
 
