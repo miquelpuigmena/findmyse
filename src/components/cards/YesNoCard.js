@@ -1,25 +1,38 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { CARDS } from '../../constants';
+
 
 export default class YesNoCard extends React.Component {
+
+  onPressYes = () => {
+
+    if (!!CARDS[this.props.data.id + 1]){
+      this.props.navigate('Story', {data: CARDS[this.props.data.id +1]})
+    } else {
+      // TODO
+    }
+    
+  }
+
+  onPressNo = () => {
+
+  }
+
     render() {
-
-      const touchDisabled = this.props.chosenOption !== null;
-
-      //TODO: Add logic for touched
 
         return (
           <View style={{margin: 5}}>
             <View style={styles.questionTextContainer}>
-              <Text style={styles.questionText}>{this.props.question}</Text>
+              <Text style={styles.questionText}>{this.props.data.text}</Text>
             </View>
             <View style={styles.card}>
-                <TouchableOpacity style={styles.cardYes} disabled={touchDisabled}>
-                    <Text style={styles.cardText}>{this.props.leftText}</Text>
+                <TouchableOpacity style={styles.cardYes}>
+                    <Text style={styles.cardText}>{this.props.data.leftText}</Text>
                 </TouchableOpacity>
                 <View style={styles.cardSeparator}/>
-                <TouchableOpacity style={styles.cardNo} disabled={touchDisabled}>
-                    <Text style={styles.cardText}>{this.props.rightText}</Text>
+                <TouchableOpacity style={styles.cardNo}>
+                    <Text style={styles.cardText}>{this.props.data.rightText}</Text>
                 </TouchableOpacity>
             </View>
           </View>

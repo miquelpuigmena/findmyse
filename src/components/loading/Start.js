@@ -1,11 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Dimensions } from 'react-native';
+import { CARDS } from '../../constants';
 
 export default class Loading extends React.Component {
 
   _onPress = () => {
     const { navigate } = this.props.navigation;
-    navigate('Story');
+    navigate('Story', {data: CARDS[0]});
   };
 
   render() {
