@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import MainHeader from '../mainHeader/MainHeader';
-
+import RankingItem from './RankingItem'
 
 export default class Ranking extends React.Component {
 
@@ -12,13 +12,13 @@ export default class Ranking extends React.Component {
             <View style={styles.container}>
                 <Text style={styles.rankingText}>{'These are the results based on\nyour answers click them to learn\nmore about your Sweden'}</Text>
                 <View style={styles.resultsContainer}>
-                    <View style={styles.firstResult}></View>
-                    <View style={styles.secondResult}></View>
-                    <View style={styles.thirdResult}></View>
+                    <RankingItem first={true} city={'Stockholm'} university={'KTH'} source={require('./first.png')}/>
+                    <RankingItem first={false} city={'Linköping'} university={'LIU'} source={require('./second.png')}/>
+                    <RankingItem first={false} city={'Luleä'} university={'LTU'} source={require('./third.png')}/>
                 </View>
             </View>
             <View style={styles.navigationContainer}>
-                <Text style={styles.rankingText}>{'Save the results and do the test again'}</Text>
+                <Text style={styles.arrowText}>{'Save the results and do the test again'}</Text>
                 <Image style={styles.arrow} source={require('./arrow.png')} />
             </View>
         </View>
@@ -31,49 +31,28 @@ const styles = StyleSheet.create({
     },
     rankingText: {
         textAlign: 'center',
-        paddingTop: 50,
-        fontSize: 18,
-
+        paddingTop: 30,
+        fontSize: 20,
+        color: 'rgb( 0, 81, 139)'
     },
     resultsContainer: {
 
     },
-    firstResult: {
-        height: 120,
-        width: 240,
-        borderRadius: 5,
-        backgroundColor: 'yellow',
-        alignItems: 'center',
-        left: 75,
-        top: 50
-    },
-    secondResult: {
-        height: 80,
-        width: 160,
-        borderRadius: 5,
-        backgroundColor: 'red',
-        left: 20,
-        top: 75
-    },
-    thirdResult: {
-        height: 80,
-        width: 160,
-        borderRadius: 5,
-        backgroundColor: 'blue',
-        left: 190,
-        top: 50
-    },
     navigationContainer: { 
-        paddingTop: 25,
+        padding: 20,
         flex: 1,
         flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
+        alignItems: 'flex-end',
+        justifyContent: 'space-between',
+    },
+    arrowText: {
+        textAlign: 'center',
+        fontSize: 16,
+        color: 'rgb( 0, 81, 139)'
     },
     arrow: {
         height: 20,
         width: 20,
         resizeMode: 'contain',
-        margin: 10,
     }
 });

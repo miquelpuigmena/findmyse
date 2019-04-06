@@ -16,45 +16,13 @@ export default class MainHeader extends React.Component {
       }
 }
 
-
 const styles = StyleSheet.create({
   container: {
       flexDirection: 'column',
       padding: 20,
-      paddingTop: 50,
-      backgroundColor: '#dddddd'
-  },
-  storiesContainer: {
-    flexDirection: 'row',
-    paddingBottom: 10
-  },
-  story: {
-    height: 5,
-    flex: 1,
-    backgroundColor: "#ffffff77",
-    margin: 3
-  },
-  storySeen: {
-    height: 5,
-    flex: 1,
-    backgroundColor: "white",
-    margin: 3
-  },
-  userContainer: {
-      flexDirection: 'row',
-      alignItems: 'center'
-  },
-  avatar: {
-      height: 40,
-      width: 40,
-      borderRadius: 20,
-      backgroundColor: 'yellow'
-  },
-  username: {
-    fontWeight: 'bold',
-    marginLeft: 10,
-    color: 'darkgrey',
-    fontSize: 18
+      paddingTop: 40,
+      backgroundColor: 'rgb(0, 81, 139)',
+       height: 80
   },
   headerContainer: {
     flexDirection: 'row',
@@ -62,16 +30,17 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   profileIcon: {
-    width: 40, 
-    height: 40
+    width: 25, 
+    height: 25
 
   },
   screenTitle: {
-    fontSize: 25,
+    fontSize: 15,
+    color: 'rgb(255, 255, 255)'
   },
   messageIcon: {
-    width: 40,
-    height: 40
+    width: 25,
+    height: 25
 
   }
 });
