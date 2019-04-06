@@ -9,7 +9,7 @@ import StoryFooter from './StoryFooter';
 export default class Story extends React.Component {
   render() {
     return (
-      <View style={{flex: 1, backgroundColor: '#f00'}}>
+      <View style={{flex: 1, backgroundColor: 'rgb(0,81,139)'}}>
         <StoryHeader />
         <View style={styles.container}>
           <YesNoCard question="Is this a question?" leftText="YES" rightText="NO" chosenOption={null} onPress={null} />

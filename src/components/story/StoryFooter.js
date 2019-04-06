@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   storySeen: {
     height: 5,
     flex: 2,
-    backgroundColor: "white"
+    backgroundColor: "rgb(254,190,16)"
   },
   userContainer: {
       flexDirection: 'row',
