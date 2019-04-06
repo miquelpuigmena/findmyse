@@ -12,14 +12,14 @@ export default class Ranking extends React.Component {
             <View style={styles.container}>
                 <Text style={styles.rankingText}>{'These are the results based on\nyour answers click them to learn\nmore about your Sweden'}</Text>
                 <View style={styles.resultsContainer}>
-                    <RankingItem first={true} city={'Stockholm'} university={'KTH'} source={require('./first.png')}/>
-                    <RankingItem first={false} city={'Linköping'} university={'LIU'} source={require('./second.png')}/>
-                    <RankingItem first={false} city={'Luleä'} university={'LTU'} source={require('./third.png')}/>
+                    <RankingItem ranking={'#1'} city={'Stockholm'} university={'Karolinska Institutet'}/>
+                    <RankingItem ranking={'#2'} city={'Linköping'} university={'LIU'}/>
+                    <RankingItem ranking={'#3'} city={'Luleä'} university={'LTU'}/>
                 </View>
             </View>
             <View style={styles.navigationContainer}>
                 <Text style={styles.arrowText}>{'Save the results and do the test again'}</Text>
-                <Image style={styles.arrow} source={require('./arrow.png')} />
+                <Image style={styles.arrow} source={require('./blueArrow.png')} />
             </View>
         </View>
     )
@@ -28,6 +28,9 @@ export default class Ranking extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     rankingText: {
         textAlign: 'center',

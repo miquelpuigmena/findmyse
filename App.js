@@ -4,6 +4,7 @@ import Story from './src/components/story/Story';
 import Chat from './src/components/chat/Chat';
 import Ranking from './src/components/ranking/Ranking';
 import Result from './src/components/result/Result';
+import RankingItem from './src/components/ranking/RankingItem';
 
 
 export default class App extends React.Component {
