@@ -13,7 +13,6 @@ export default class Story extends React.Component {
         <StoryHeader />
         <View style={styles.container}>
           <YesNoCard question="Is this a question?" leftText="YES" rightText="NO" chosenOption={null} onPress={null} />
-          <SliderCard question="Is this a question?" />
         </View>
         <StoryFooter />
       </View>
@@ -21,6 +20,8 @@ export default class Story extends React.Component {
     );
   }
 }
+
+// <SliderCard question="Is this a question?" />
 
 const styles = StyleSheet.create({
   container: {

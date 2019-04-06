@@ -1,16 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import Story from './src/components/story/Story';
-import Chat from './src/components/chat/Chat';
-import Ranking from './src/components/ranking/Ranking';
-import Result from './src/components/result/Result';
-
-=======
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { AppLoading, Asset, Font, Icon, ScreenOrientation } from 'expo';
 import AppNavigator from './src/navigation/AppNavigator';
->>>>>>> 4335be5d6698a29eb97760aa587cd10ba225cd51
 
 export default class App extends React.Component {
   state = {
@@ -18,14 +9,6 @@ export default class App extends React.Component {
   };
 
   render() {
-<<<<<<< HEAD
-    return (
-      <View style={{flex: 1}}>
-        <Result id={1} ranking={3}/>
-        {/* <Ranking/> */}
-      </View>
-    );
-=======
     if (!this.state.isLoadingComplete && !this.props.skipLoadingScreen) {
       return (
         <AppLoading
@@ -41,7 +24,6 @@ export default class App extends React.Component {
         </View>
       );
     }
->>>>>>> 4335be5d6698a29eb97760aa587cd10ba225cd51
   }
 
   _loadResourcesAsync = async () => {

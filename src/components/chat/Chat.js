@@ -1,8 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, View, FlatList, KeyboardAvoidingView } from 'react-native';
+import { StyleSheet, Text, View, FlatList, KeyboardAvoidingView, TouchableOpacity } from 'react-native';
 import ChatHeader from './ChatHeader';
 import ChatFooter from './ChatFooter';
 const axios = require('axios');
+const moment = require('moment');
 
 
 export default class Story extends React.Component {
@@ -14,7 +15,7 @@ export default class Story extends React.Component {
   }
 
   onSubmit = async (text) => {
-    const newMess = {key: ""+this.state.messages.length,text,time: '9:11 am', mine: true};
+    const newMess = {key: ""+this.state.messages.length,text,time: moment().format("h:mm a"), mine: true};
     this.setState({messages: [...this.state.messages, newMess]})
     //TODO: await axios.post('URL', {text});
     setTimeout(this.answer, 1500);
@@ -22,7 +23,10 @@ export default class Story extends React.Component {
 
   addChatbotMessage = (text) => {
     if (!!text) {
-      const newMess = {key: ""+this.state.messages.length,text,time: '9:11 am', mine: false};
+      const newMess = {key: ""+this.state.messages.length,text,time: moment().format("h:mm a"), mine: false};
+      this.setState({messages: [...this.state.messages, newMess]})
+    } else {
+      const newMess = {key: ""+this.state.messages.length,time: moment().format("h:mm a"), mine: false};
       this.setState({messages: [...this.state.messages, newMess]})
     }
     
@@ -43,12 +47,26 @@ export default class Story extends React.Component {
         break;
       case 8:
       this.addChatbotMessage("Tack! You are ready to start:")
-      this.addChatbotMessage('Start');
+      this.addChatbotMessage();
         break
     }
   }
 
+  navigate = () => {
+    const { navigate } = this.props.navigation;
+    navigate('Start');
+  }
+
   renderItem = ({item}) => {
+    if (!item.text) {
+      return (<View style={{flexDirection: 'row', paddingTop: 10, paddingBottom: 10}}>
+        <View style={{flex: item.mine ? 1 : 0}}/>
+        <TouchableOpacity style={styles.bubble} onPress={this.navigate}>
+          <Text style={{fontSize: 16, maxWidth: 230}}>⏭ Start</Text>
+        </TouchableOpacity>
+        <View style={{flex: item.mine ? 0 : 1}}/>
+      </View>)
+    }
     return (
       <View style={{flexDirection: 'row', paddingTop: 10, paddingBottom: 10}}>
       <View style={{flex: item.mine ? 1 : 0}}/>
