@@ -1,11 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { CARDS } from '../../constants';
+const axios = require('axios');
 
 
 export default class YesNoCard extends React.Component {
 
   onPressYes = () => {
+    // TODO 
 
     if (!!CARDS[this.props.data.id + 1]){
       this.props.navigate('Story', {data: CARDS[this.props.data.id +1]})
@@ -16,6 +18,13 @@ export default class YesNoCard extends React.Component {
   }
 
   onPressNo = () => {
+    //TODO axios.post
+
+    if (!!CARDS[this.props.data.id + 1]){
+      this.props.navigate('Story', {data: CARDS[this.props.data.id +1]})
+    } else {
+      // TODO
+    }
 
   }
 
@@ -27,12 +36,12 @@ export default class YesNoCard extends React.Component {
               <Text style={styles.questionText}>{this.props.data.text}</Text>
             </View>
             <View style={styles.card}>
-                <TouchableOpacity style={styles.cardYes}>
-                    <Text style={styles.cardText}>{this.props.data.leftText}</Text>
+                <TouchableOpacity style={styles.cardYes} onPress={this.onPressYes}>
+                    <Text style={styles.cardText}>{this.props.data.leftValue}</Text>
                 </TouchableOpacity>
                 <View style={styles.cardSeparator}/>
-                <TouchableOpacity style={styles.cardNo}>
-                    <Text style={styles.cardText}>{this.props.data.rightText}</Text>
+                <TouchableOpacity style={styles.cardNo} onPress={this.onPressNo}>
+                    <Text style={styles.cardText}>{this.props.data.rightValue}</Text>
                 </TouchableOpacity>
             </View>
           </View>
