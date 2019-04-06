@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, FlatList, KeyboardAvoidingView } from 'react-native';
 import ChatHeader from './ChatHeader';
 import ChatFooter from './ChatFooter';
+const axios = require('axios');
 
 
 export default class Story extends React.Component {
@@ -12,9 +13,10 @@ export default class Story extends React.Component {
     setTimeout(this.answer, 1500);
   }
 
-  onSubmit = (text) => {
+  onSubmit = async (text) => {
     const newMess = {key: ""+this.state.messages.length,text,time: '9:11 am', mine: true};
     this.setState({messages: [...this.state.messages, newMess]})
+    //TODO: await axios.post('URL', {text});
     setTimeout(this.answer, 1500);
   }
 
