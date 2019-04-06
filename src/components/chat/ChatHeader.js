@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   username: {
     fontWeight: 'bold',
     marginLeft: 10,
-    color: 'darkGrey',
+    color: 'darkgrey',
     fontSize: 18
   }
 });
