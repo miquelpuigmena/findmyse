@@ -16,6 +16,11 @@ export default class Story extends React.Component {
     this.setState({messages: [...this.state.messages, newMess]})
   }
 
+  addChatbotMessage = (text) => {
+    const newMess = {key: ""+this.state.messages.length,text,time: '9:11 am', mine: false};
+    this.setState({messages: [...this.state.messages, newMess]})
+  }
+
   renderItem = ({item}) => {
     return (
       <View style={{flexDirection: 'row', paddingTop: 10, paddingBottom: 10}}>
