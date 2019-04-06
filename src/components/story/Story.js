@@ -4,6 +4,8 @@ import SliderCard from '../cards/SliderCard';
 import YesNoCard from '../cards/YesNoCard';
 import StoryHeader from './StoryHeader';
 import StoryFooter from './StoryFooter';
+import { CARDS } from '../../constants';
+
 
 
 export default class Story extends React.Component {
@@ -13,11 +15,10 @@ export default class Story extends React.Component {
     const { navigate } = this.props.navigation;
     return (
       <View style={{flex: 1, backgroundColor: 'rgb(0,81,139)'}}>
-        <StoryHeader />
+        <StoryHeader done={data.id} total={CARDS.lenght} />
         <View style={styles.container}>
           <YesNoCard data={data} navigate={navigate} />
         </View>
-        <StoryFooter />
       </View>
       
     );

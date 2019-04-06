@@ -12,7 +12,7 @@ export default class YesNoCard extends React.Component {
     if (!!CARDS[this.props.data.id + 1]){
       this.props.navigate('Story', {data: CARDS[this.props.data.id +1]})
     } else {
-      // TODO
+      this.props.navigate('Ranking')
     }
     
   }
@@ -23,7 +23,7 @@ export default class YesNoCard extends React.Component {
     if (!!CARDS[this.props.data.id + 1]){
       this.props.navigate('Story', {data: CARDS[this.props.data.id +1]})
     } else {
-      // TODO
+      this.props.navigate('Ranking')
     }
 
   }

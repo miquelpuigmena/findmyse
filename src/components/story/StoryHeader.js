@@ -2,16 +2,25 @@ import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 export default class StoryHeader extends React.Component {
+
+  renderStories = () => {
+    const stories = []
+    for (let i=0; i < this.props.total;  i++) {
+        if (i > this.props.done) {
+          stories.push(<View style={styles.story} key={""+i}/>);
+        } else {
+          stories.push(<View style={styles.storySeen} key={""+i}/>);
+        }
+    }
+    return stories
+  }
+
     render() {
 
         return (
           <View style={styles.container}>
             <View style={styles.storiesContainer}>
-                <View style={styles.storySeen}/>
-                <View style={styles.storySeen}/>
-                <View style={styles.story}/>
-                <View style={styles.story}/>
-                <View style={styles.story}/>
+                {this.renderStories().map(i => i)}
             </View>
           </View>
         );
