@@ -13,11 +13,6 @@ export default class StoryHeader extends React.Component {
                 <View style={styles.story}/>
                 <View style={styles.story}/>
             </View>
-            <View style={styles.userContainer}>
-                <View style={styles.avatar} />
-                <Text style={styles.username}>Your Story</Text>
-                <Text style={styles.description}>18h</Text>
-            </View>
           </View>
         );
       }
@@ -43,7 +38,7 @@ const styles = StyleSheet.create({
   storySeen: {
     height: 5,
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: "rgb(254,190,16)",
     margin: 3
   },
   userContainer: {

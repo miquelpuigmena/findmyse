@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
       flexDirection: 'column',
       padding: 20,
       paddingTop: 50,
-      backgroundColor: '#dddddd'
+      backgroundColor: 'rgb(0,81,139)'
   },
   storiesContainer: {
     flexDirection: 'row',
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   username: {
     fontWeight: 'bold',
     marginLeft: 10,
-    color: 'darkGrey',
+    color: 'white',
     fontSize: 18
   }
 });

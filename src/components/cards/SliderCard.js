@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     margin: 20
   },
   sliderStart: {
-    backgroundColor: 'red',
+    backgroundColor: 'rgb(254,190,16)',
     height: 10,
     flex: 1,
     borderTopLeftRadius: 5,
