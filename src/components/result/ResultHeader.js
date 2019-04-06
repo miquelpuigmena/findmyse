@@ -2,14 +2,14 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, Alert, TouchableWithoutFeedback } from 'react-native';
 
 export default class ResultHeader extends React.Component {
-  goBack() {
+  _goBack() {
     Alert.alert('You are going back!')
   }
     render() {
 
         return (
           <View style={styles.container}>   
-          <TouchableWithoutFeedback onPress={this.goBack}>
+          <TouchableWithoutFeedback onPress={this._goBack}>
             <View style={styles.goBackContainer} >
                 <Image style={styles.arrowIcon} source={require('./assets/whiteArrow.png')}/>
                 <Text style={styles.screenTitle}>{'Your Sweden'}</Text>

@@ -16,7 +16,6 @@ const HomeStack = createStackNavigator({
   Chat: Chat,
   Ranking: Ranking,
   Result: Result
-
 }, {headerMode: 'none'});
 
 export default HomeStack;
