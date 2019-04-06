@@ -3,7 +3,6 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 
 export default class ResultInformation extends React.Component {
     render() {
-
         return (
             <View style={styles.container}>   
                 <Text style={styles.cityText}>{this.props.city}</Text>
@@ -39,6 +38,10 @@ const styles = StyleSheet.create({
     paddingLeft: 15,
     paddingRight: 15,
     fontSize: 16
+  },
+  img: {
+    height: 225,
+    width: 375,
   },
   highlightText: {
     paddingTop: 20,

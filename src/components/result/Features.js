@@ -8,10 +8,10 @@ export default class Features extends React.Component {
         return (
             <View style={styles.container}>   
                 <Text style={styles.title}>Interesting facts</Text>
-                <FeaturesItem id={1} />
-                <FeaturesItem id={2} />
-                <FeaturesItem id={3} />
-                <FeaturesItem id={4} />
+                <FeaturesItem icon={this.props.icon1} feature={this.props.feature1}/>
+                <FeaturesItem icon={this.props.icon2} feature={this.props.feature2}/>
+                <FeaturesItem icon={this.props.icon3} feature={this.props.feature3}/>
+                <FeaturesItem icon={this.props.icon4} feature={this.props.feature4}/>
             </View>
         );
       }

@@ -22,6 +22,10 @@ const styles = StyleSheet.create({
   title: {
     fontSize:  18,
     paddingBottom: 10
+  },
+  map: {
+    height: 120,
+    width: 345,
   }
 });
   

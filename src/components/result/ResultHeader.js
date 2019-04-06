@@ -1,15 +1,21 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, Alert, TouchableWithoutFeedback } from 'react-native';
 
 export default class ResultHeader extends React.Component {
+  goBack() {
+    Alert.alert('You are going back!')
+  }
     render() {
 
         return (
           <View style={styles.container}>   
-            <View style={styles.goBackContainer}>
-                <Image style={styles.arrowIcon} source={require('./arrow.png')}/>
+          <TouchableWithoutFeedback onPress={this.goBack}>
+            <View style={styles.goBackContainer} >
+                <Image style={styles.arrowIcon} source={require('./assets/whiteArrow.png')}/>
                 <Text style={styles.screenTitle}>{'Your Sweden'}</Text>
             </View>
+          </TouchableWithoutFeedback>
+
             <View style={styles.rankingContainer}>
               <Image style={styles.rankingImage} source={require('./ranking.png')} />
               <Text style={styles.rankingText}>{'#'+this.props.ranking}</Text>
@@ -47,7 +53,7 @@ const styles = StyleSheet.create({
     top: -45,
     left: 280,
     height: 123,
-    width: 70
+    width: 70,
   },
   rankingText: {
     top: -90,

@@ -6,9 +6,9 @@ export default class FeaturesItem extends React.Component {
 
         return (
             <View style={styles.container}>  
-                <View style={styles.icon}></View>
-                {/* <Image style={styles.icon} source={this.props.icon} /> */} 
-                <Text style={styles.description}>{this.props.description}</Text>
+                {/* <View style={styles.icon}></View> */}
+                <Image style={styles.icon} source={this.props.icon} />
+                <Text style={styles.description}>{this.props.feature}</Text>
             </View>
         );
       }
@@ -23,7 +23,6 @@ const styles = StyleSheet.create({
   },
   icon: {
     marginRight: 15,
-    backgroundColor: 'red',
     height: 60,
     width: 60,
     top: 0,
