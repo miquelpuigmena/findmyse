@@ -7,3 +7,4 @@ npm-debug.*
 *.mobileprovision
 *.pyc
 __pycache__/
+*.gif
