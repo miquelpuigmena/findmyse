@@ -1,1 +1,1 @@
-![prototype](presentation/prototip.gif)
+![prototype](presentation/prototip.gif | width=100)
