@@ -1,1 +1,1 @@
-![prototype](prototip.gif)
+![prototype](presentation/prototip.gif)
