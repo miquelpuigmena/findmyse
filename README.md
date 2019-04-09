@@ -2,5 +2,4 @@
 We help students in choosing university and city with results based on their study preferences and lifestyles.
 
 ## Demo time
-<img src="presentation/prototip.gif" width="40%" height="40%" />
-![](presentation/prototip.gif width=100)
+<img src="presentation/prototip.gif" width="50%" height="50%" />
