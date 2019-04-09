@@ -3,4 +3,4 @@ We help students in choosing university and city with results based on their stu
 
 ## Demo time
 <img src="presentation/prototip.gif" width="392" height="704" />
-![](presentation/prototip.gif | width=100)
+![](presentation/prototip.gif width=100)
